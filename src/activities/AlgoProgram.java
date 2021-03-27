@@ -16,8 +16,11 @@ public class AlgoProgram {
         };
 
         quickSort(gladiators);
+        writeToFile(gladiators, output);
+    }
 
-        for (Person p : gladiators) {
+    public static void writeToFile(Person[] list, PrintStream output) {
+        for (Person p : list) {
             output.print(p.years2Retire + " (years to retirement) - ");
             output.println(p.firstName + " " + p.lastName + " [" + p.age + "]");
         }
