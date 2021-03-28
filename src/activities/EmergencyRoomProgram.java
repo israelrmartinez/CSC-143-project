@@ -7,9 +7,9 @@ public class EmergencyRoomProgram {
 
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
+        ArrayList<Patient> room = new ArrayList<>();
 
         int total = numPatients(console);
-        ArrayList<Patient> room = new ArrayList<>();
 
         room = patientDetails(total, console, room);
 
@@ -42,8 +42,8 @@ public class EmergencyRoomProgram {
 
     public static void printPriority(ArrayList<Patient> room) {
         System.out.println("Visitors to the Emergency Room:");
-        for (int i = 1; i <= room.size(); i++) {
-            System.out.print(i + ". ");
+        for (int i = 0; i < room.size(); i++) {
+            System.out.print((i + 1) + ". ");
             System.out.println(room.get(i));
         }
     }
